@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class KeypadController(private val keypadService: KeypadService) {
 
     @GetMapping
-    fun createKeypad(): List<KeypadButton> {
+    fun createKeypad(): String {
         return keypadService.generateShuffledKeypad()
     }
 }
